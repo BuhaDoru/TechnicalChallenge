@@ -22,16 +22,11 @@
         c4.appendChild(img);
         c4.value = i;
         c4.onclick = function() { 
-                        var largeImg = new Image();
-                        for (let i = 0; i < 250; ++i) {
-                          if (c4.value == i) {
-                            largeImg = user[i].picture.large
-                            document.getElementById("image").src = largeImg;
-                            let myModal = new bootstrap.Modal(document.getElementById('myModal'), {});
-                            myModal.show();
-                          }
-                        } 
-                      };
+                       largeImg = user[c4.value].picture.large
+                       document.getElementById("image").src = largeImg;
+                       let myModal = new bootstrap.Modal(document.getElementById('myModal'), {});
+                       myModal.show();
+                     };
       }
     })
   .catch(error => console.log(error));
