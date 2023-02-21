@@ -21,6 +21,7 @@
         img.src = user[i].picture.thumbnail
         c4.appendChild(img);
         c4.value = i;
+        var largeImg = new Image();
         c4.onclick = function() { 
                        largeImg = user[c4.value].picture.large
                        document.getElementById("image").src = largeImg;
